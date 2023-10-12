@@ -6,13 +6,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @Slf4j
 @RequiredArgsConstructor
+@ComponentScan(basePackages = {"az.springjpa.service", "az.springjpa.controller", "az.springjpa.repository"})
 public class SpringJpaApplication implements CommandLineRunner {
 
-    private final StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringJpaApplication.class, args);
@@ -20,14 +22,14 @@ public class SpringJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-//        Student student = Student.builder()
-//                .firstName("Mirrufat")
-//                .secondName("Seyidov")
+//
+//       Student student = new Student().builder()
+//                .id(4L)
+//                .firstName("Vusal")
+//                .secondName("Ashrafli")
 //                .age(20)
-//                .studentNumber("AA1229868")
+//                .studentNumber("AA1227787")
 //                .build();
 //        studentRepository.save(student);
-
     }
 }

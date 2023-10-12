@@ -8,7 +8,6 @@ services:
       - '2222:3306'
     volumes:
       - my-db:/var/lib/mysql
-
   adminer:
     image: dockette/adminer:full-php5
     ports:
